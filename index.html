@@ -993,6 +993,17 @@
         .hero-check-3, .hero-check-circle-3 { animation-delay: 2.8s; }
         .hero-check-4, .hero-check-circle-4 { animation-delay: 3.3s; }
 
+        /* Final checkmark appears after all 4 checks complete */
+        /* Circle fades in at 3.9s, checkmark draws immediately after */
+        .hero-check-final-circle {
+            opacity: 0;
+            animation: fadeIn 0.3s ease 3.9s forwards;
+        }
+
+        .hero-check-final {
+            animation-delay: 3.95s;
+        }
+
         /* Respect reduced motion */
         @media (prefers-reduced-motion: reduce) {
             .hero-badge,
@@ -1011,10 +1022,12 @@
             }
 
             .hero-check,
-            .hero-check-circle {
+            .hero-check-circle,
+            .hero-check-final-circle {
                 opacity: 1;
                 stroke-dashoffset: 0;
                 animation: none;
+                transform: scale(1);
             }
         }
 
@@ -1168,8 +1181,9 @@
                     <!-- Animated check for Color-Only panel -->
                     <circle class="hero-check-circle hero-check-circle-4" cx="930" cy="365" r="12" fill="#10b981"/>
                     <path class="hero-check hero-check-4" d="M924 365l4 4 8-8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <circle cx="920" cy="70" r="20" fill="#38bdf8"/>
-                    <path d="M912 70l6 6 10-10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Final checkmark - appears after all 4 checks complete -->
+                    <circle class="hero-check-final-circle" cx="920" cy="70" r="20" fill="#38bdf8"/>
+                    <path class="hero-check hero-check-final" d="M912 70l6 6 10-10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                 </svg>
             </div>
 
