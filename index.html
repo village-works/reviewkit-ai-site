@@ -20,23 +20,35 @@
 
     <style>
         :root {
-            /* Colors from logo - cyan/turquoise, coral/salmon, peachy orange */
-            --color-primary: #0ea5e9;
-            --color-primary-dark: #0284c7;
-            --color-secondary: #f87171;
-            --color-accent: #fb923c;
-            --color-coral: #f8a4a4;
-            --color-peach: #fcd5b8;
-            --color-cyan-light: #b8e8f8;
-            --color-success: #10b981;
-            --color-error: #ef4444;
-            --color-bg: #ffffff;
-            --color-bg-secondary: #fafcfd;
-            --color-bg-dark: #1e3a4c;
-            --color-text: #1e3a4c;
-            --color-text-secondary: #4a6572;
-            --color-text-light: #f8fafc;
-            --color-border: #e2eef4;
+            /* Design System Colors */
+            --color-primary: #2563eb;       /* --rk-brand-primary */
+            --color-primary-dark: #1d4ed8;  /* --rk-brand-primary-hover */
+            --color-secondary: #0891b2;     /* --rk-brand-accent */
+            
+            /* Mapped Gradients/Accents */
+            --color-accent: #3b82f6;        /* Blue 500 */
+            --color-coral: #60a5fa;         /* Blue 400 */
+            --color-peach: #93c5fd;         /* Blue 300 */
+            --color-cyan-light: #e0f2fe;    /* Sky 100 */
+
+            /* Semantic */
+            --color-success: #16a34a;       /* --rk-success */
+            --color-error: #dc2626;         /* --rk-error */
+            
+            /* Surfaces */
+            --color-bg: #ffffff;            /* --rk-bg-default */
+            --color-bg-secondary: #f8fafc;  /* --rk-bg-subtle */
+            --color-bg-dark: #0f172a;       /* --rk-bg-default (dark) */
+            
+            /* Text */
+            --color-text: #020617;          /* --rk-text-primary */
+            --color-text-secondary: #475569;/* --rk-text-secondary */
+            --color-text-light: #f8fafc;    /* --rk-text-primary (dark) */
+            
+            /* Borders */
+            --color-border: #cbd5e1;        /* --rk-border-default */
+            
+            /* Radius - Keeping existing site values for layout stability */
             --radius-sm: 8px;
             --radius-md: 12px;
             --radius-lg: 20px;
@@ -243,9 +255,9 @@
         .hero {
             padding: 160px 0 100px;
             background:
-                radial-gradient(ellipse 80% 50% at 20% 40%, rgba(184, 232, 248, 0.4) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 40% at 80% 20%, rgba(248, 164, 164, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse 50% 30% at 60% 80%, rgba(252, 213, 184, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse 80% 50% at 20% 40%, rgba(56, 189, 248, 0.25) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 80% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 30% at 60% 80%, rgba(14, 165, 233, 0.2) 0%, transparent 50%),
                 linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg) 100%);
             overflow: hidden;
         }
@@ -382,23 +394,23 @@
         }
 
         .feature-icon.contrast {
-            background: linear-gradient(135deg, #fef3c7, #fde68a);
-            color: #b45309;
+            background: linear-gradient(135deg, #ffedd5, #fed7aa);
+            color: #ea580c;
         }
 
         .feature-icon.text-size {
-            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-            color: #1d4ed8;
+            background: linear-gradient(135deg, #ccfbf1, #99f6e4);
+            color: #0d9488;
         }
 
         .feature-icon.touch {
-            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-            color: #047857;
+            background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+            color: #7c3aed;
         }
 
         .feature-icon.color {
-            background: linear-gradient(135deg, #fce7f3, #fbcfe8);
-            color: #be185d;
+            background: linear-gradient(135deg, #ffe4e6, #fecdd3);
+            color: #e11d48;
         }
 
         .feature-card h3 {
@@ -425,8 +437,8 @@
         /* How It Works */
         .how-it-works {
             background:
-                radial-gradient(ellipse 60% 40% at 10% 50%, rgba(252, 213, 184, 0.25) 0%, transparent 50%),
-                radial-gradient(ellipse 50% 30% at 90% 70%, rgba(184, 232, 248, 0.25) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 10% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 30% at 90% 70%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
                 var(--color-bg-secondary);
         }
 
@@ -657,8 +669,8 @@
         /* Testimonials */
         .testimonials {
             background:
-                radial-gradient(ellipse 50% 40% at 80% 20%, rgba(248, 164, 164, 0.2) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 30% at 20% 80%, rgba(184, 232, 248, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 40% at 80% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 30% at 20% 80%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
                 var(--color-bg-secondary);
         }
 
@@ -692,7 +704,7 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--color-cyan-light), var(--color-coral), var(--color-peach));
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -714,7 +726,7 @@
         .cta {
             background:
                 radial-gradient(ellipse 80% 60% at 20% 80%, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 50% at 80% 20%, rgba(248, 164, 164, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 50% at 80% 20%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
                 var(--color-bg-dark);
             color: var(--color-text-light);
             text-align: center;
@@ -1104,9 +1116,9 @@
                     </svg>
                     Figma Plugin
                 </div>
-                <h1 id="hero-heading">Accessibility checks in Figma, in seconds</h1>
+                <h1 id="hero-heading">Ship accessible designs, straight from Figma</h1>
                 <p class="hero-description">
-                    Run WCAG accessibility audits directly in your design files. Check contrast ratios, text sizes, touch targets, and more without leaving Figma.
+                    Catch WCAG violations instantly—no context switching, no extra tools, no compliance headaches. Check contrast, sizes, and targets in seconds.
                 </p>
                 <div class="hero-cta">
                     <a href="https://www.figma.com/community/plugin/1593111569370833680/reviewkit" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
@@ -1270,7 +1282,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Up and running in 30 seconds</h2>
-                <p>No configuration, no account required. Just install and start checking your designs for accessibility issues.</p>
+                <p>No configuration required. Just install and start checking your designs for accessibility issues.</p>
             </div>
 
             <div class="steps" id="steps-container">
@@ -1374,12 +1386,6 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        No account required
-                    </div>
-                    <div class="integration-feature">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
                         Click-to-navigate
                     </div>
                     <div class="integration-feature">
@@ -1448,7 +1454,7 @@
     <section class="cta">
         <div class="container">
             <h2>Start designing accessibly today</h2>
-            <p>ReviewKit is free, fast, and works right in Figma. No account required.</p>
+            <p>ReviewKit is free, fast, and works right in Figma.</p>
             <div class="cta-buttons">
                 <a href="https://www.figma.com/community/plugin/1593111569370833680/reviewkit" class="btn btn-white" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
