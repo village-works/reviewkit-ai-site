@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://reviewkit.ai/sitemap.xml
